@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daman & Shitij❤️ - 1 Year of togetherness</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(to bottom, #ffe6f0, #fff0f5);
+        overflow-x: hidden;
+        color: #333;
+    }
+    header {
+        text-align: center;
+        padding: 50px 20px 20px 20px;
+    }
+    header h1 {
+        font-size: 3em;
+        margin: 0;
+        color: #ff4d6d;
+    }
+    header p {
+        font-size: 1.5em;
+        margin-top: 10px;
+        color: #ff6699;
+    }
+    #countup {
+        font-size: 1.2em;
+        margin-top: 10px;
+    }
+    .gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    .photo {
+        margin: 20px 0;
+        text-align: center;
+        transition: transform 0.3s;
+    }
+    .photo img {
+        max-width: 80%;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .photo img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+    .photo p {
+        margin-top: 10px;
+        font-size: 1.2em;
+        color: #ff3366;
+    }
+    .final-message {
+        text-align: center;
+        font-size: 2em;
+        margin: 50px 20px;
+        color: #ff1a75;
+    }
+    /* Floating hearts */
+    .heart {
+        position: absolute;
+        color: #ff4d6d;
+        font-size: 20px;
+        animation: float 5s linear infinite;
+        opacity: 0.8;
+    }
+    @keyframes float {
+        0% { transform: translateY(100vh) translateX(0); opacity: 0.8; }
+        50% { opacity: 1; }
+        100% { transform: translateY(-50vh) translateX(50px); opacity: 0; }
+    }
+    #musicButton {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 10px 15px;
+        background-color: #ff6699;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 1em;
+    }
+</style>
+</head>
+<body>
+
+<button id="musicButton">Play Music</button>
+<audio id="bgMusic" loop>
+    <source src="Congratulations_And_Celebrations (1).mp3" type="audio/mpeg">
+</audio>
+
+<header>
+    <h1>DAMAN ❤️ SHITIJ</h1>
+    <p>Happy 1 Year COMPLETE!</p>
+    <div id="countup">Days Together: 0 | Hours: 0 | Minutes: 0 | Seconds: 0</div>
+</header>
+
+<div class="gallery">
+    <h3>Happy 1 Year, you two! 💕
+From your first coffee date to all the little laughs, silly moments, and adventures, every day has been a new page in your love story.
+May your love continue to grow, your smiles stay bright, and your hearts stay forever connected. 🥰
+Here’s to countless more memories, hugs, and heartbeats together.</h3>
+<h3>i know har relationship me ups and down ate hai kbhi good moments share krte h kbhi bad moments share krte h. but main point is sath rehna and ladai jhgda to hr jgha hota h it makes the bond more stronger</h3>
+</div>
+
+<div class="final-message">
+    Happy 1 Year of Love! Here’s to many more 💞
+</div>
+
+<script>
+    // Countdown / Count-up Timer
+    const startDate = new Date("2024-10-22T00:00:00"); // Relationship start date
+    const countupEl = document.getElementById('countup');
+
+    function updateCountup() {
+        const now = new Date();
+        let diff = now - startDate;
+        const days = Math.floor(diff / (1000*60*60*24));
+        diff -= days*(1000*60*60*24);
+        const hours = Math.floor(diff / (1000*60*60));
+        diff -= hours*(1000*60*60);
+        const minutes = Math.floor(diff / (1000*60));
+        diff -= minutes*(1000*60);
+        const seconds = Math.floor(diff / 1000);
+        countupEl.innerHTML = `Days Together: ${days} | Hours: ${hours} | Minutes: ${minutes} | Seconds: ${seconds}`;
+    }
+    setInterval(updateCountup, 1000);
+
+    // Floating Hearts
+    function createHeart() {
+        const heart = document.createElement('div');
+        heart.className = 'heart';
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.fontSize = Math.random() * 30 + 10 + 'px';
+        heart.style.animationDuration = 3 + Math.random() * 5 + 's';
+        heart.innerHTML = '❤️';
+        document.body.appendChild(heart);
+        setTimeout(() => { heart.remove(); }, 8000);
+    }
+    setInterval(createHeart, 500);
+
+    // Music Button
+    const musicButton = document.getElementById('musicButton');
+    const bgMusic = document.getElementById('bgMusic');
+    let isPlaying = false;
+    musicButton.addEventListener('click', () => {
+        if (!isPlaying) {
+            bgMusic.play();
+            musicButton.innerText = "Pause Music";
+            isPlaying = true;
+        } else {
+            bgMusic.pause();
+            musicButton.innerText = "Play Music";
+            isPlaying = false;
+        }
+    });
+</script>
+<script>
+    let password = prompt("Enter the password to view this page:");
+    if(password !== "forevertogether") {
+        document.body.innerHTML = "<h2>Access Denied 💔</h2>";
+        document.body.style.textAlign = "center";
+        document.body.style.marginTop = "50px";
+        document.body.style.fontFamily = "Arial, sans-serif";
+    }
+</script>
+
+
+</body>
+</html>
